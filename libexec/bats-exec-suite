@@ -20,7 +20,8 @@ for filename in "$@"; do
   echo "count: ${count}"
   echo "filename: ${filename}"
   #let count+="$(bats-exec-test -c "$filename")"
-  let "count += $(bats-exec-test -c "$filename")"
+  #let "count += $(bats-exec-test -c "$filename")"
+  let count+=1
 done
 
 if [ -n "$count_only_flag" ]; then
